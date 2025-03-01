@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vereinbarungsmonitor</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> 
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Vereinbarungsmonitor</h1>
+        <div class="header-icons">
+            <button id="themeToggle"><i class="fas fa-moon"></i></button>
+            <button id="menuToggle"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+
+    <!-- Menü -->
+    <div id="menu" class="menu">
+        <ul>
+            <li><a href="#" id="exportList">Liste exportieren</a></li>
+            <li><a href="#" id="importList">Liste importieren</a></li>
+            <li><a href="#" id="aboutAuthor">Author: Loki & KI</a></li>
+            <li><a href="#" id="aboutAuthor">Version. 1.0</a></li>
+        </ul>
+    </div>
+
+    <main>
+        <section class="chart-and-form">
+            <div class="chart-container">
+                <h2>Übersicht</h2>
+                <canvas id="vereinbarungenChart"></canvas>
+            </div>
+            <div class="form-container">
+                <h2>Neue Vereinbarung hinzufügen</h2>
+                <form id="newEntryForm">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" required>
+
+                    <label for="versanddatum">Versanddatum:</label>
+                    <input type="date" id="versanddatum" required>
+
+                    <label for="mitarbeiter">Mitarbeiter:</label>
+                    <input type="text" id="mitarbeiter" required>
+
+                    <button type="submit">Hinzufügen</button>
+                </form>
+            </div>
+        </section>
+
+        
+        <section>
+            <h2>Alle Vereinbarungen</h2>
+            <table id="allEntriesTable">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Versanddatum</th>
+                        <th>Mitarbeiter</th>
+                        <th>Unterschrieben</th>
+                        <th>Löschen</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+</html>
